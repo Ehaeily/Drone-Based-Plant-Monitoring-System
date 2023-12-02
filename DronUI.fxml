@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="746.0" prefWidth="1051.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+   <children>
+      <SplitPane dividerPositions="0.4947418738049713" layoutX="1.0" layoutY="-2.0" prefHeight="748.0" prefWidth="1048.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="398.0" prefWidth="289.0">
+               <children>
+                  <Button layoutX="10.0" layoutY="336.0" mnemonicParsing="false" onAction="#deleteSelected" prefHeight="25.0" prefWidth="120.0" text="- Delete Selected" />
+                  <Button layoutX="10.0" layoutY="270.0" mnemonicParsing="false" onAction="#addItemContainer" prefHeight="25.0" prefWidth="138.0" text="+ Add Item Container" />
+                  <Button layoutX="10.0" layoutY="303.0" mnemonicParsing="false" onAction="#addItem" prefHeight="25.0" prefWidth="85.0" text="+ Add Item " />
+                  <Button fx:id="saveBut" layoutX="304.0" layoutY="169.0" mnemonicParsing="false" onAction="#setNameF" text="Save" />
+                  <Label layoutX="7.0" layoutY="19.0" text="Farm Items" />
+                  <Label layoutX="215.0" layoutY="45.0" text="Name" />
+                  <Label layoutX="215.0" layoutY="73.0" text="Position (x, y)" />
+                  <Label layoutX="215.0" layoutY="102.0" text="Size ( L, W, H )" />
+                  <Label layoutX="215.0" layoutY="133.0" text="Price" />
+                  <TextField fx:id="positionX" layoutX="301.0" layoutY="69.0" prefHeight="25.0" prefWidth="42.0" />
+                  <TextField fx:id="positionY" layoutX="347.0" layoutY="69.0" prefHeight="25.0" prefWidth="42.0" />
+                  <TextField fx:id="sizeH" layoutX="393.0" layoutY="98.0" prefHeight="25.0" prefWidth="42.0" />
+                  <TextField fx:id="sizeL" layoutX="301.0" layoutY="98.0" prefHeight="25.0" prefWidth="42.0" />
+                  <TextField fx:id="sizeW" layoutX="347.0" layoutY="98.0" prefHeight="25.0" prefWidth="42.0" />
+                  <TextField fx:id="priceText" layoutX="301.0" layoutY="129.0" prefHeight="25.0" prefWidth="92.0" />
+                  <TreeView fx:id="treeView" layoutX="10.0" layoutY="40.0" onContextMenuRequested="#selectItem" onMouseClicked="#selectItem" prefHeight="217.0" prefWidth="190.0" />
+                  <Button fx:id="AddDroneButton" layoutX="10.0" layoutY="373.0" mnemonicParsing="false" onAction="#displayImage" text="+ Add Drone" />
+                  <Button fx:id="visuli" layoutX="122.0" layoutY="516.0" mnemonicParsing="false" onAction="#drowRec" text="Visulization Dron" />
+                  <Button fx:id="scanButton" layoutX="30.0" layoutY="516.0" mnemonicParsing="false" onAction="#scanFarm" text="Scan Farm" />
+                  <Button fx:id="visitButton" layoutX="252.0" layoutY="516.0" mnemonicParsing="false" onAction="#visitFarm" text="Visit Farm" />
+                  <Label layoutX="19.0" layoutY="453.0" prefHeight="23.0" prefWidth="127.0" text="Drone  Actions">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="gobackButton" layoutX="341.0" layoutY="516.0" mnemonicParsing="false" onAction="#goBackDrone" text="Go Home" />
+                  <Button fx:id="ChangeButton" layoutX="435.0" layoutY="170.0" mnemonicParsing="false" onAction="#chageSet" text="Chage" />
+                  <ListView fx:id="itemInfor" layoutX="215.0" layoutY="283.0" onEditStart="#setNameF" prefHeight="190.0" prefWidth="290.0" />
+                  <Label layoutX="217.0" layoutY="232.0" prefHeight="23.0" prefWidth="155.0" text="All itmes Information " />
+                  <Label layoutX="217.0" layoutY="262.0" prefHeight="17.0" prefWidth="290.0" text="Name        |      Positon                   |  Size           |      Price" />
+                  <TextField fx:id="setName" layoutX="301.0" layoutY="41.0" prefHeight="25.0" prefWidth="88.0" />
+               </children>
+            </AnchorPane>
+          <AnchorPane fx:id="dashboard" minHeight="0.0" minWidth="0.0" prefHeight="398.0" prefWidth="292.0">
+               <children>
+                  <ImageView fx:id="myImageView" fitHeight="50.0" fitWidth="62.0" pickOnBounds="true" preserveRatio="true" />
+               </children></AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
